@@ -1,0 +1,157 @@
+.container {
+    background-color: var(--vlGrayBlue);
+    background-image: url(../../assets/bg-top.svg);
+    background-position: 190px -30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 4em 0;
+    color: var(--GrayBlue);
+}
+
+header .toggler {
+    margin-top: 2em;
+    gap: 1em;
+    color: var(--lGrayBlue);
+}
+
+.toggle-container {
+    padding: 2px;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    justify-content: flex-end;
+    cursor: pointer;
+    background: var(--grad);
+}
+
+.toggle-container:hover {
+    opacity: .6;
+}
+
+.toggle-container.active {
+    justify-content: flex-start;
+}
+
+.inner-toggle {
+    height: 21px;
+    width: 21px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.plan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 0 1.5em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    padding: 1.5em;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .08)
+}
+
+.plan-card:nth-child(2) {
+    background: var(--grad);
+}
+
+.plan-card:nth-child(2) * {
+    color: var(--vlGrayBlue);
+}
+
+.plan-card:nth-child(2) button {
+    color: hsl(237, 63%, 64%);
+    background: none;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.plan-card:nth-child(2) button:hover {
+    border: 1px solid var(--vlGrayBlue);
+    background: hsl(237, 63%, 64%);
+    color: var(--vlGrayBlue);
+}
+
+.plan-name {
+    color: var(--GrayBlue);
+}
+
+.plan-price {
+    margin: 10px 0;
+    font-size: 4em;
+    color: var(--DGrayBlue);
+}
+
+.features {
+    margin: 1.5em 0;
+}
+
+.feature {
+    padding: .8em;
+    border-bottom: 1px solid var(--lGrayBlue);
+    color: var(--GrayBlue);
+}
+
+.feature:nth-of-type(1) {
+    border-top: 1px solid var(--lGrayBlue);
+}
+
+.plan-container button {
+    width: 100%;
+    border: 0px;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    background: var(--grad);
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.plan-container button:hover {
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+    background: transparent;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        background-position: top right;
+        background-size: 32%;
+    }
+
+    .plan-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        gap: .8em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .plan-container {
+        gap: .8em;
+    }
+
+    .plan-card:nth-child(2) {
+        transform: scale(1.1);
+    }
+}

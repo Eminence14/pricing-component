@@ -1,0 +1,1 @@
+A responsive pricing component built by Ibidunmoye Victor. 
